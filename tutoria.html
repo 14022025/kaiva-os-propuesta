@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaiva OS · tutoría</title>
+<meta name="description" content="Por qué cada cosa va donde va en Kaiva OS: Inicio y Pendientes, tamaños, colores, espacio y flujos. Para el equipo y para cualquiera que toque el panel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/kaiva.css">
+<link rel="stylesheet" href="assets/propuesta.css">
+<style>
+/* Tutoría: las mismas piezas de la propuesta. Tarjetas blancas con contorno fino (el gris es «lo perdido»). */
+.tu-rej { display: grid; gap: 16px; margin-top: 32px; }
+.tu-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.tu-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tu-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tu-t { background: #fff; border-radius: 20px; padding: 22px; box-shadow: inset 0 0 0 1px var(--line); display: flex; flex-direction: column; gap: 8px; }
+.negra .tu-t { background: #18181B; box-shadow: none; }
+.tu-t h3 { font-size: 19px; letter-spacing: -.015em; margin: 0; }
+.tu-t p { margin: 0; color: var(--ink-2); font-size: 14.5px; line-height: 1.5; }
+.negra .tu-t p { color: rgba(255,255,255,.68); }
+.tu-t .si, .tu-t .no { font-size: 13.5px; font-weight: 600; display: flex; gap: 8px; align-items: baseline; }
+.tu-t .si::before { content: "✓"; color: var(--violet-text); }
+.tu-t .no::before { content: "✕"; color: var(--ink-3); }
+.tu-t .si + .no, .tu-t .no + .si { margin-top: -2px; }
+.tu-et { font-size: 12.5px; font-weight: 600; color: var(--ink-3); }
+.negra .tu-et { color: rgba(255,255,255,.45); }
+
+/* Dos pantallas lado a lado: Inicio y Pendientes */
+.tu-pant { border-radius: 20px; padding: 14px; background: var(--mist); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 8px; grid-auto-rows: 54px; }
+.tu-pant b { border-radius: 12px; background: #fff; font-size: 11.5px; font-weight: 600; padding: 8px 10px; display: flex; align-items: flex-start; }
+.tu-pant .m { background: var(--violet); color: #fff; }
+.tu-pant .n { background: var(--ink); color: #fff; }
+.tu-pant .c3 { grid-column: span 3; } .tu-pant .c4 { grid-column: span 4; } .tu-pant .c5 { grid-column: span 5; } .tu-pant .c8 { grid-column: span 8; } .tu-pant .c12 { grid-column: span 12; }
+.tu-pant .r2 { grid-row: span 2; } .tu-pant .r3 { grid-row: span 3; }
+
+/* Tamaños */
+.tu-tam { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 10px; margin-top: 28px; }
+.tu-tam div { border-radius: 16px; padding: 14px; box-shadow: inset 0 0 0 1px var(--line); background: #fff; min-height: 120px; display: flex; flex-direction: column; justify-content: space-between; }
+.tu-tam div span { font-size: 12.5px; color: var(--ink-3); font-weight: 600; }
+.tu-tam div b { font-size: 15px; letter-spacing: -.01em; }
+.tu-tipos { display: grid; grid-template-columns: auto 1fr; gap: 6px 24px; align-items: baseline; margin-top: 28px; }
+.tu-tipos .x { letter-spacing: -.03em; font-weight: 600; line-height: 1; }
+.tu-tipos small { color: var(--ink-2); font-size: 14px; }
+
+/* Colores */
+.tu-col { border-radius: 20px; padding: 20px; min-height: 190px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; box-shadow: inset 0 0 0 1px var(--line); }
+.tu-col h3 { font-size: 20px; margin: 0; letter-spacing: -.02em; }
+.tu-col p { margin: 0; font-size: 14px; line-height: 1.45; }
+.tu-col .pct { font-size: 38px; font-weight: 600; letter-spacing: -.04em; line-height: 1; }
+.tu-col.blanco { background: #fff; }
+.tu-col.blanco p { color: var(--ink-2); }
+.tu-col.negro { background: var(--ink); color: #fff; box-shadow: none; }
+.tu-col.negro p { color: rgba(255,255,255,.7); }
+.tu-col.morado { background: var(--violet); color: #fff; box-shadow: none; }
+.tu-col.morado p { color: rgba(255,255,255,.78); }
+.tu-col.gris { background: var(--mist); color: var(--ink-3); box-shadow: none; }
+.tu-col.gris h3 { color: var(--ink-2); }
+.tu-marcas { display: flex; gap: 8px; flex-wrap: wrap; }
+.tu-marcas i { width: 22px; height: 22px; border-radius: 50%; display: block; }
+
+/* Flujo */
+.tu-flujo { display: flex; align-items: stretch; gap: 10px; margin-top: 28px; flex-wrap: wrap; }
+.tu-flujo div { flex: 1 1 160px; border-radius: 18px; padding: 16px; background: rgba(255,255,255,.08); display: flex; flex-direction: column; gap: 6px; }
+.tu-flujo div b { font-size: 16px; }
+.tu-flujo div span { font-size: 13.5px; color: rgba(255,255,255,.66); line-height: 1.45; }
+.tu-flujo div.ahora { background: #fff; color: var(--ink); }
+.tu-flujo div.ahora span { color: var(--ink-2); }
+.tu-flecha { align-self: center; color: rgba(255,255,255,.4); font-size: 20px; flex: none; }
+
+/* Revisar antes de entregar */
+.tu-check { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 28px 0 0; padding: 0; counter-reset: c; }
+.tu-check li { list-style: none; background: #fff; border-radius: 16px; padding: 14px 16px 14px 54px; position: relative; box-shadow: inset 0 0 0 1px var(--line); font-size: 15px; font-weight: 600; }
+.tu-check li small { display: block; font-weight: 400; color: var(--ink-2); font-size: 13.5px; margin-top: 2px; }
+.tu-check li::before { counter-increment: c; content: counter(c); position: absolute; left: 14px; top: 13px; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-size: 13px; font-weight: 700; }
+
+@media (max-width: 900px) {
+  .tu-2, .tu-3, .tu-4, .tu-check { grid-template-columns: minmax(0, 1fr); }
+  .tu-tam div { grid-column: span 12 !important; min-height: 70px; }
+  .tu-flecha { display: none; }
+  .barra-sup nav { display: none; }
+}
+</style>
+</head>
+<body class="doc">
+<div class="envoltura">
+
+  <header class="barra-sup">
+    <span class="k">K</span>
+    <nav>
+      <a href="index.html">Propuesta</a>
+      <a class="activo" href="#">Tutoría</a>
+      <a href="#donde">Dónde va</a>
+      <a href="#tamanos">Tamaños</a>
+      <a href="#colores">Colores</a>
+      <a href="#espacio">Espacio</a>
+      <a href="#flujo">Flujo</a>
+      <a href="investigacion.html">Investigación</a>
+    </nav>
+    <a class="pildora" href="#revisar">Las 10 preguntas<span class="circulo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </header>
+
+  <!-- 1. La idea -->
+  <section class="seccion heroe" style="grid-template-columns:1fr">
+    <div>
+      <div class="sobre">Tutoría de Kaiva OS · 21 de octubre de 2026</div>
+      <h1 class="h-grande dos-tonos"><span class="gris">No leemos.</span> Analizamos.</h1>
+      <p class="bajada">Ni el cliente ni nosotros leemos el panel: lo miramos tres segundos y decidimos. Por eso cada cosa tiene un lugar fijo, un tamaño que dice cuánto importa y un color que dice qué hay que hacer. Esta tutoría explica el porqué de cada decisión, para que cualquiera que toque el panel la siga.</p>
+      <div class="cifras-heroe">
+        <div><b>3 s</b><span>para saber qué toca hoy</span></div>
+        <div><b>1</b><span>significado por color</span></div>
+        <div><b>3</b><span>tamaños de tarjeta</span></div>
+        <div><b>0</b><span>huecos en blanco</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Inicio y Pendientes -->
+  <section class="seccion" id="donde">
+    <div class="sobre">Dónde va cada cosa</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Inicio muestra.</span> Pendientes se trabaja.</h2>
+    <p class="bajada">Son dos pantallas distintas porque responden dos preguntas distintas. Mezclarlas es lo que hacía que todo pesara lo mismo.</p>
+
+    <div class="tu-rej tu-2">
+      <div class="tu-t">
+        <span class="tu-et">Inicio · «¿cómo vamos y qué toca ya?»</span>
+        <div class="tu-pant" aria-hidden="true">
+          <b class="c5 r2">Lo primero de hoy</b><b class="c3 r2">Trabajando con</b><b class="c4 r2 m">Por cobrar</b>
+          <b class="c8 r3">Agenda</b><b class="c4 n">Sale esta semana</b><b class="c4">Personas · Google</b><b class="c4">Cifras</b>
+        </div>
+        <p>Un resumen de cinco segundos. Lo atrasado arriba a la izquierda, porque ahí empieza el ojo. La plata por cobrar en morado, porque es una acción. Todo se toca: cada tarjeta lleva a donde se resuelve.</p>
+        <span class="si">Lo atrasado, lo de hoy, la plata y con quién trabajamos</span>
+        <span class="no">Listas largas, formularios, detalles de una sola marca</span>
+      </div>
+      <div class="tu-t">
+        <span class="tu-et">Pendientes · «¿qué hago ahora, uno por uno?»</span>
+        <div class="tu-pant" aria-hidden="true">
+          <b class="c8 r3">La Agenda completa: atrasadas, hoy, mañana</b><b class="c4 n r2">Hoy · 2 de 5 hechas</b>
+          <b class="c4">Lo último que hicimos</b><b class="c8 r2">…</b><b class="c4 r2">…</b>
+        </div>
+        <p>La lista entera para trabajar: marcar, mover, abrir. Vive en el menú con su número, porque es lo que más se usa; si estuviera dentro de Inicio, habría que buscarla.</p>
+        <span class="si">Todas las tareas, con su check, su marca y su fecha</span>
+        <span class="no">Cifras de la web, cobros, cosas que no se marcan</span>
+      </div>
+    </div>
+
+    <div class="tu-rej tu-4">
+      <div class="tu-t"><span class="tu-et">Ventas</span><h3>La plata y la gente</h3><p>Dinero, Tablero y Contactos en una sola pantalla. La ficha de alguien se abre encima, no en otra página.</p></div>
+      <div class="tu-t"><span class="tu-et">Proyectos</span><h3>Un Drive por marca</h3><p>Carpetas en el color de cada marca. Adentro: archivos y su brand book, nada más.</p></div>
+      <div class="tu-t"><span class="tu-et">Visibilidad</span><h3>Todo Google, una página</h3><p>Diez tarjetas pequeñas. El detalle de cada una (búsquedas, canales, revisiones) se abre en una ventana.</p></div>
+      <div class="tu-t"><span class="tu-et">Plan · Redes</span><h3>Decidir y publicar</h3><p>Las decisiones viven solo en Plan, una a la vez. Redes muestra lo publicado y lo que viene.</p></div>
+    </div>
+  </section>
+
+  <!-- 3. Simplificar -->
+  <section class="seccion negra">
+    <div class="sobre">Por qué simplificado</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Una tarjeta,</span> una pregunta.</h2>
+    <p class="bajada">El ojo recorre la pantalla en Z: arriba a la izquierda, arriba a la derecha, abajo. Si cada tarjeta responde una sola pregunta, la Z alcanza para entender todo.</p>
+    <div class="tu-rej tu-3">
+      <div class="tu-t"><span class="tu-et">Títulos</span><h3>Una o dos palabras</h3><p>«Por cobrar», «Agenda», «Google». El periodo y el detalle van chiquitos, junto al número.</p></div>
+      <div class="tu-t"><span class="tu-et">Números</span><h3>Grandes y con contexto</h3><p>«3.151 · +55 %» dice más que una tabla. Un número sin «frente a qué» no se analiza.</p></div>
+      <div class="tu-t"><span class="tu-et">Gráficos</span><h3>Chicos y pocos</h3><p>Una línea para la tendencia, barras para comparar. Nunca tablas de lunes a domingo.</p></div>
+      <div class="tu-t"><span class="tu-et">Texto</span><h3>Solo para decidir</h3><p>Las palabras van donde hay que elegir algo. Lo demás se dice con tamaño, color y forma.</p></div>
+      <div class="tu-t"><span class="tu-et">Detalle</span><h3>En una ventana</h3><p>Lo largo se abre encima de la página. Cerrarla te deja exactamente donde estabas.</p></div>
+      <div class="tu-t"><span class="tu-et">Repetir</span><h3>Nunca</h3><p>Cada dato vive en un solo lugar. Si aparece dos veces, una sobra.</p></div>
+    </div>
+  </section>
+
+  <!-- 4. Tamaños -->
+  <section class="seccion" id="tamanos">
+    <div class="sobre">Tamaños para la jerarquía</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Lo grande</span> es lo importante.</h2>
+    <p class="bajada">Tres tamaños de tarjeta, y de dos a cuatro por fila. Ninguna tarjeta sola a lo ancho: una franja entera para una sola cosa es espacio perdido.</p>
+    <div class="tu-tam">
+      <div style="grid-column:span 8"><span>Grande · 8 de 12</span><b>Lo que se usa a diario: la Agenda</b></div>
+      <div style="grid-column:span 4"><span>Mediana · 4 o 5</span><b>Lo que pide una acción: Por cobrar, Lo primero</b></div>
+      <div style="grid-column:span 3"><span>Cuadrada · 3</span><b>Un estado: con quién trabajamos</b></div>
+      <div style="grid-column:span 3"><span>Cuadrada · 3</span><b>Una cifra</b></div>
+      <div style="grid-column:span 6"><span>Mediana · 6</span><b>Una comparación pequeña</b></div>
+    </div>
+    <div class="tu-tipos">
+      <span class="x" style="font-size:44px">$4,6 M</span><small>La cifra: lo primero que se ve de la tarjeta.</small>
+      <span class="x" style="font-size:22px">Por cobrar</span><small>El título: 18–22 px, una o dos palabras.</small>
+      <span class="x" style="font-size:15px;font-weight:500">Thallo — Serie AI Shortlist</span><small>El cuerpo: 14–15 px.</small>
+      <span class="x" style="font-size:12.5px;font-weight:500;color:var(--ink-3)">desde 30 sep · 28 días</span><small>El detalle: 12–13 px, en gris.</small>
+    </div>
+  </section>
+
+  <!-- 5. Colores -->
+  <section class="seccion" id="colores">
+    <div class="sobre">Colores</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Cada color</span> significa una sola cosa.</h2>
+    <p class="bajada">Si un color cambia de sentido entre pantallas, deja de servir. Por eso son pocos y cada uno tiene un trabajo fijo.</p>
+    <div class="proporcion" title="Proporción de color"><i style="flex:60;background:#E6E6EA"></i><i style="flex:30;background:var(--ink)"></i><i style="flex:10;background:var(--violet)"></i></div>
+    <div class="tu-rej tu-4">
+      <div class="tu-col blanco"><span class="pct">60 %</span><div><h3>Blanco</h3><p>La base. Tarjetas blancas con un contorno finito: donde vive la información.</p></div></div>
+      <div class="tu-col negro"><span class="pct">30 %</span><div><h3>Negro</h3><p>Lo importante y lo firme: lo cobrado, lo ganado, lo atrasado, el botón principal.</p></div></div>
+      <div class="tu-col morado"><span class="pct">10 %</span><div><h3>Morado</h3><p>Hazlo ahora: por cobrar, lo de hoy, lo que está en proceso. Puntual, nunca para pintar bloques enteros.</p></div></div>
+      <div class="tu-col gris"><span class="pct">—</span><div><h3>Gris</h3><p>No seleccionado, no importa o lo perdimos. Solo para eso: una tarjeta gris dice «esto ya no cuenta».</p></div></div>
+    </div>
+    <div class="tu-rej tu-2">
+      <div class="tu-t">
+        <span class="tu-et">Colores de cada marca</span>
+        <div class="tu-marcas" aria-hidden="true"><i style="background:#041632"></i><i style="background:#3A4A1F"></i><i style="background:#0F62A8"></i><i style="background:#4E1E86"></i></div>
+        <p>Dicen <b>de quién</b> es algo, nunca qué hacer: el punto junto a una tarea, la carpeta, el círculo del contacto. El círculo de la persona va en el color exacto de su marca; los puntos y barras sobre blanco, un poco más claros para que se vean.</p>
+      </div>
+      <div class="tu-t">
+        <span class="tu-et">Lo que no se usa</span>
+        <span class="no">Degradados, en ningún lado</span>
+        <span class="no">Verde o rojo de sistema: «entregado» va en el color de su marca y lo dice en palabras</span>
+        <span class="no">El morado claro #7A3FC9 como relleno: solo letra y líneas</span>
+        <span class="no">Gris para algo que importa</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Espacio -->
+  <section class="seccion negra" id="espacio">
+    <div class="sobre">Espacio</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Sin huecos,</span> al ras del menú.</h2>
+    <p class="bajada">El espacio en blanco que no separa nada se lee como «aquí falta algo». Cada pantalla que no tiene scroll termina exactamente donde termina el menú de la izquierda.</p>
+    <div class="tu-rej tu-3">
+      <div class="tu-t"><span class="tu-et">Si sobra alto</span><h3>Se lo lleva lo importante</h3><p>La Agenda en Inicio, las fotos del trabajo en el brand book, la zona para soltar archivos en una carpeta vacía.</p></div>
+      <div class="tu-t"><span class="tu-et">Si falta alto</span><h3>Desliza por dentro</h3><p>La lista se mueve dentro de su tarjeta, sin barras horizontales y sin estirar la página.</p></div>
+      <div class="tu-t"><span class="tu-et">Vecinas</span><h3>Mismo alto, 16 px entre todo</h3><p>Dos tarjetas de una misma fila terminan en la misma línea. Siempre.</p></div>
+      <div class="tu-t"><span class="tu-et">El menú</span><h3>Delgado y con nombres</h3><p>Ícono más nombre, 64–72 px de ancho: se entiende sin abrirlo y no le roba sitio al contenido.</p></div>
+      <div class="tu-t"><span class="tu-et">Avisos</span><h3>Nunca una franja entera</h3><p>«Hay monedas mezcladas» o «conecta Analytics» van dentro de su tarjeta o como píldora junto al título.</p></div>
+      <div class="tu-t"><span class="tu-et">Celular</span><h3>Su propio orden</h3><p>Una columna, lo urgente primero, sin estirar mockups ni celulares.</p></div>
+    </div>
+  </section>
+
+  <!-- 7. Flujo -->
+  <section class="seccion negra" id="flujo" style="background:var(--violet-deep)">
+    <div class="sobre">Flujo</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Siempre sabes</span> dónde estás y cómo volver.</h2>
+    <div class="tu-flujo">
+      <div><b>Inicio</b><span>Ves lo que toca. Tocas una tarjeta.</span></div>
+      <span class="tu-flecha" aria-hidden="true">→</span>
+      <div><b>La sección</b><span>Una sola página con todo lo de ese tema, en tarjetas pequeñas.</span></div>
+      <span class="tu-flecha" aria-hidden="true">→</span>
+      <div class="ahora"><b>La ventana</b><span>El detalle se abre encima. No hay subpáginas.</span></div>
+      <span class="tu-flecha" aria-hidden="true">→</span>
+      <div><b>Volver</b><span>Cerrar, Esc o «Inicio / Sección» arriba te devuelven sin perder nada.</span></div>
+    </div>
+  </section>
+
+  <!-- 8. Revisar -->
+  <section class="seccion" id="revisar">
+    <div class="sobre">Antes de entregar cualquier pantalla</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Las 10</span> preguntas.</h2>
+    <ol class="tu-check">
+      <li>¿Se entiende en 3 segundos qué toca?<small>Si hay que leer para saberlo, falta jerarquía.</small></li>
+      <li>¿Lo más importante es lo más grande?<small>La cifra o la acción, no el título.</small></li>
+      <li>¿Cada color significa lo mismo que en el resto?<small>Negro firme, morado ahora, gris perdido, marca = de quién.</small></li>
+      <li>¿Hay alguna tarjeta gris que sí importa?<small>Pásala a blanco.</small></li>
+      <li>¿Algo ocupa una franja entera solo?<small>Júntalo con su tarjeta o hazlo píldora.</small></li>
+      <li>¿Termina al ras del menú?<small>Sin hueco abajo, sin scroll si no hace falta.</small></li>
+      <li>¿Hay una subpágina que podría ser ventana?<small>El detalle va encima de su página.</small></li>
+      <li>¿Algún dato aparece dos veces?<small>Uno sobra.</small></li>
+      <li>¿Toda tarjeta se puede tocar entera?<small>Y lleva a donde se resuelve.</small></li>
+      <li>¿Funciona en el celular?<small>Una columna, lo urgente primero.</small></li>
+    </ol>
+  </section>
+
+  <p class="nota-f" style="text-align:center;margin:8px 0 24px">Kaiva Studio · tutoría interna · las reglas completas viven en el panel, en «Reglas del panel»</p>
+</div>
+</body>
+</html>
