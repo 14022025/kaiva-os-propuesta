@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaiva OS · prototipo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/kaiva.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body class="app">
+  <div class="armazon">
+    <nav class="menu" id="menu" aria-label="Secciones"></nav>
+    <main class="contenido" id="contenido"><div class="vista" id="vista"></div></main>
+  </div>
+  <div class="paleta-k" id="paleta" role="dialog" aria-label="Buscar o ir a">
+    <div class="velo"></div>
+    <div class="caja">
+      <input type="text" placeholder="Buscar o ir a… (sección, cliente, «nuevo»)" aria-label="Buscar">
+      <ul></ul>
+      <div class="pie"><span>↑↓ moverse</span><span>Enter ir</span><span>Esc cerrar</span><span>G luego I = Inicio</span></div>
+    </div>
+  </div>
+  <script src="datos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

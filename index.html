@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaiva OS · propuesta</title>
+<meta name="description" content="Propuesta para ordenar el panel de Kaiva Studio por lo que importa: jerarquía, menú, flujos y movimiento, con su investigación.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/kaiva.css">
+<link rel="stylesheet" href="assets/propuesta.css">
+</head>
+<body class="doc">
+<div class="envoltura">
+
+  <header class="barra-sup">
+    <span class="k">K</span>
+    <nav>
+      <a class="activo" href="#">Propuesta</a>
+      <a href="#jerarquia">Jerarquía</a>
+      <a href="#menu">Menú</a>
+      <a href="#flujos">Flujos</a>
+      <a href="#secciones">Secciones</a>
+      <a href="#movimiento">Movimiento</a>
+      <a href="#skills">Skills</a>
+      <a href="investigacion.html">Investigación</a>
+    </nav>
+    <a class="pildora" href="app/">Abrir el prototipo<span class="circulo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </header>
+
+  <!-- 1. Héroe -->
+  <section class="seccion heroe">
+    <div>
+      <div class="sobre">Kaiva OS · propuesta de octubre de 2026</div>
+      <h1 class="h-grande dos-tonos"><span class="gris">Lo que importa,</span> primero.</h1>
+      <p class="bajada">El panel tiene todo, pero todo pesa lo mismo. Esta propuesta lo ordena por importancia: lo que toca hacer hoy grande y arriba, los números con su contexto y lo que solo se consulta abajo y en gris. Proyectos y Ventas quedan como están; cambia cómo se muestran.</p>
+      <div class="botones">
+        <a class="pildora" href="app/">Probar el prototipo<span class="circulo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        <a class="pildora blanca" style="outline:1px solid var(--line)" href="investigacion.html">Leer la investigación<span class="circulo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      </div>
+      <div class="cifras-heroe">
+        <div><b>1</b><span>pregunta en Inicio</span></div>
+        <div><b>4</b><span>números, no más</span></div>
+        <div><b>300 ms</b><span>tope de cualquier animación</span></div>
+      </div>
+    </div>
+    <a class="mac" href="app/#/inicio" aria-label="Abrir Inicio en el prototipo">
+      <div class="marco"><div class="pantalla"><iframe src="app/#/inicio" title="Inicio" loading="eager" tabindex="-1"></iframe></div></div>
+      <div class="base"></div>
+    </a>
+  </section>
+
+  <!-- 2. Lo que está mal hoy -->
+  <section class="seccion negra">
+    <div class="sobre">Lo que encontramos en el panel de hoy</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Todo está,</span> pero nada manda.</h2>
+    <div class="lista-num">
+      <div class="item-num"><span class="n">1</span><h3>Entras y no ves Inicio</h3><p>La dirección del panel abre la ficha de Visibilidad de kaivastudio.com. Lo primero que ves es una web, no tu día.</p></div>
+      <div class="item-num"><span class="n">2</span><h3>Tocas y llegas a nada</h3><p>«Personas en la web», en Inicio, lleva a Tráfico de kaivastudio.com, que con Google desconectado queda en blanco. Y «Volver» lleva a Visibilidad, no a Inicio.</p></div>
+      <div class="item-num"><span class="n">3</span><h3>Todo pesa igual</h3><p>Las cifras, las tareas y los avisos tienen el mismo tamaño. Nada dice «esto primero».</p></div>
+      <div class="item-num"><span class="n">4</span><h3>Tablas de días</h3><p>Los cuadritos l-m-m-j-v-s-d no dicen si vamos bien o mal. Un número con su línea chiquita lo dice de un vistazo.</p></div>
+      <div class="item-num"><span class="n">5</span><h3>Íconos sin nombre</h3><p>El menú son 8 íconos sueltos. Hay que adivinar qué es el mapa o el bombillo.</p></div>
+      <div class="item-num"><span class="n">6</span><h3>Animaciones que distraen</h3><p>Hay más de 25 animaciones distintas: carpetas que flotan, tarjetas que suben 12, 14 o 22 px y entradas que se repiten cada vez que vuelves.</p></div>
+    </div>
+  </section>
+
+  <!-- 3. Las claves -->
+  <section class="seccion">
+    <div class="sobre">Las claves, según los que más saben</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Doce reglas</span> para un panel que sirva.</h2>
+    <p class="bajada">Salen de Stephen Few, Edward Tufte, Nielsen Norman Group, Apple, Material Design, Tableau, Emil Kowalski y de cómo lo hacen Stripe, Linear, Vercel, Plausible y Basecamp. Cada una tiene su fuente en la investigación.</p>
+    <div class="lista-num">
+      <div class="item-num"><span class="n">1</span><h3>Una sola pregunta</h3><p>Inicio responde «¿qué tengo que hacer o decidir hoy?». Lo demás se consulta en su sección.</p><span class="fuente">Few · Linear (bandeja de prioridad)</span></div>
+      <div class="item-num"><span class="n">2</span><h3>Cinco segundos</h3><p>Con un vistazo se sabe si hay un incendio. Si toca buscar, el diseño falló.</p><span class="fuente">Sisense · NN/g</span></div>
+      <div class="item-num"><span class="n">3</span><h3>Arriba a la izquierda, lo urgente</h3><p>Pirámide invertida: hallazgo arriba, tendencia en medio, detalle abajo.</p><span class="fuente">Tableau · Sisense</span></div>
+      <div class="item-num"><span class="n">4</span><h3>Máximo cuatro números</h3><p>Con 8 o más tarjetas de cifras la memoria ya no da. Para Kaiva, cuatro.</p><span class="fuente">Tableau (2 o 3 vistas) · Sisense (5 a 9)</span></div>
+      <div class="item-num"><span class="n">5</span><h3>Nunca un número solo</h3><p>«¿Comparado con qué?»: contra la meta o la semana pasada, y su línea chiquita (sparkline).</p><span class="fuente">Tufte · Geckoboard</span></div>
+      <div class="item-num"><span class="n">6</span><h3>Cada dato, su forma</h3><p>Tendencia = línea. Comparar = barras. Decidir = texto. Tabla solo para buscar un valor exacto.</p><span class="fuente">Few · NN/g</span></div>
+      <div class="item-num"><span class="n">7</span><h3>Color solo para lo que importa</h3><p>Gris por defecto; el morado es «hazlo ahora». Si todo resalta, nada resalta.</p><span class="fuente">Cole Nussbaumer Knaflic</span></div>
+      <div class="item-num"><span class="n">8</span><h3>Excepciones, no rutina</h3><p>Lo que es igual todos los días no ocupa Inicio. Si no hay pendientes: «Todo al día».</p><span class="fuente">Few · Basedash</span></div>
+      <div class="item-num"><span class="n">9</span><h3>Íconos con su nombre</h3><p>Un ícono sin texto «no significa nada». El nombre siempre visible, no al pasar el mouse.</p><span class="fuente">Nielsen Norman Group</span></div>
+      <div class="item-num"><span class="n">10</span><h3>Siempre «estás aquí»</h3><p>Migas que dicen la ruta y un «Volver» que dice a dónde. No mostrar dónde estás es el error más común.</p><span class="fuente">NN/g</span></div>
+      <div class="item-num"><span class="n">11</span><h3>Todo a una tecla</h3><p>Ctrl K abre un buscador para ir a cualquier sección, cliente o acción.</p><span class="fuente">Superhuman · Linear · Raycast</span></div>
+      <div class="item-num"><span class="n">12</span><h3>Movimiento que no estorba</h3><p>Menos de 300 ms, solo transform y opacity, y lo que se usa cien veces al día casi sin animación.</p><span class="fuente">Emil Kowalski · NN/g · Apple</span></div>
+    </div>
+  </section>
+
+  <!-- 4. Jerarquía -->
+  <section class="seccion" id="jerarquia">
+    <div class="sobre">Jerarquía de Inicio</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Tamaño y color</span> según importancia.</h2>
+    <p class="bajada">Cuatro niveles. Lo que hay que hacer es lo más grande y lo único con barra de color; lo que se consulta va abajo y en blanco.</p>
+    <div class="jerarquia">
+      <div class="maqueta" id="maqueta">
+        <div class="zona z1" data-n="1" style="grid-column: span 7; grid-row: span 5"><span class="z">1</span>Hoy requiere acción<br><span class="suave" style="font-weight:500">Atrasado · Hoy · marcar hecho · ir</span></div>
+        <div class="zona z2" data-n="2" style="grid-column: span 5; grid-row: span 2"><span class="z">2</span>Por decidir</div>
+        <div class="zona z2b" data-n="2" style="grid-column: span 5; grid-row: span 3"><span class="z">2</span>Por cobrar · Recordar</div>
+        <div class="zona z3" data-n="3" style="grid-column: span 3; grid-row: span 2"><span class="z">3</span>Cobrado</div>
+        <div class="zona z3" data-n="3" style="grid-column: span 3; grid-row: span 2"><span class="z">3</span>Tratos</div>
+        <div class="zona z3" data-n="3" style="grid-column: span 3; grid-row: span 2"><span class="z">3</span>Web</div>
+        <div class="zona z3" data-n="3" style="grid-column: span 3; grid-row: span 2"><span class="z">3</span>Instagram</div>
+        <div class="zona z4" data-n="4" style="grid-column: span 7; grid-row: span 3"><span class="z">4</span>Cómo va cada cliente</div>
+        <div class="zona z4" data-n="4" style="grid-column: span 5; grid-row: span 3"><span class="z">4</span>Sale esta semana</div>
+      </div>
+      <div>
+        <div class="niveles">
+          <div class="nivel" data-n="1"><span class="z" style="background:var(--violet);color:#fff">1</span><div><h4>Lo que hay que hacer hoy</h4><p>Lista con texto, porque hay que leerla y actuar. Atrasado en barra negra, Hoy en barra morada, de a tres con flechas. Un clic marca hecho y otro lleva al lugar exacto.</p><div class="tam"><span class="chip">Lo más grande</span><span class="chip">Arriba a la izquierda</span></div></div></div>
+          <div class="nivel" data-n="2"><span class="z" style="background:var(--ink);color:#fff">2</span><div><h4>Decidir y cobrar</h4><p>Lo que frena el trabajo y la plata: la próxima decisión en negro y lo vencido con su botón «Recordar».</p><div class="tam"><span class="chip">Grande</span><span class="chip">Con botón</span></div></div></div>
+          <div class="nivel" data-n="3"><span class="z" style="background:var(--mist)">3</span><div><h4>Cuatro números con contexto</h4><p>Cobrado contra la meta, tratos abiertos, personas en la web y alcance. Cada uno con su comparación y su gráfica chiquita.</p><div class="tam"><span class="chip">Mediano</span><span class="chip">Sin tablas</span></div></div></div>
+          <div class="nivel" data-n="4"><span class="z" style="background:var(--mist);color:var(--ink-3)">4</span><div><h4>Para mirar de pasada</h4><p>Una fila igual por cliente y lo que sale esta semana. Todo lleva a su sección.</p><div class="tam"><span class="chip">Abajo</span><span class="chip gris">Se consulta</span></div></div></div>
+        </div>
+        <div class="proporcion" title="Proporción de color"><i style="flex:60;background:#E6E6EA"></i><i style="flex:30;background:var(--ink)"></i><i style="flex:10;background:var(--violet)"></i></div>
+        <p class="nota-f" style="margin-top:8px">60 % blanco y grises · 30 % negro · 10 % morado (el morado es «hazlo ahora»).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Menú -->
+  <section class="seccion" id="menu">
+    <div class="sobre">El menú</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Lo diario arriba,</span> lo de consulta abajo.</h2>
+    <p class="bajada">Siete secciones (Material recomienda de tres a siete), cada ícono con su nombre debajo y un número solo donde hay algo por hacer.</p>
+    <div class="menu-demo">
+      <div class="rail" aria-hidden="true">
+        <span class="logo">K</span>
+        <span class="g">Diario</span>
+        <span class="it on"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg></span>Inicio<span class="b">6</span></span>
+        <span class="it"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="3"/><path d="M3 10h18"/></svg></span>Ventas<span class="b" style="background:var(--ink)">2</span></span>
+        <span class="it"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>Proyectos</span>
+        <span class="it"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></span>Redes</span>
+        <span class="it"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4h11l-2 4 2 4H5"/></svg></span>Plan<span class="b">4</span></span>
+        <span class="sep"></span>
+        <span class="g">Consulta</span>
+        <span class="it"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>Visibilidad</span>
+        <span class="it"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21.5h4"/><path d="M12 2.5a6.5 6.5 0 0 0-3.8 11.8c.5.4.8 1 .8 1.6V16h6v-.1c0-.6.3-1.2.8-1.6A6.5 6.5 0 0 0 12 2.5z"/></svg></span>Ideas</span>
+        <div class="abajo">
+          <span class="it"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>Buscar</span>
+          <span class="it"><span class="i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/></svg></span>Reglas</span>
+        </div>
+      </div>
+      <div class="porque">
+        <div class="item-num"><span class="n">1</span><h3>Con nombre, siempre</h3><p>El ícono solo obliga a adivinar. El nombre debajo cabe en la misma barra angosta, como en Material y en Figma.</p></div>
+        <div class="item-num"><span class="n">2</span><h3>Ordenado por frecuencia</h3><p>Diario: Inicio, Ventas, Proyectos, Redes y Plan. Consulta: Visibilidad e Ideas. Buscar y Reglas, abajo.</p></div>
+        <div class="item-num"><span class="n">3</span><h3>Números que piden algo</h3><p>Inicio: tareas de hoy. Ventas: cobros vencidos. Plan: decisiones. Si no hay nada, no hay número.</p></div>
+        <div class="item-num"><span class="n">4</span><h3>Ideas = Tendencias + Sugerencias</h3><p>Las dos se consultan igual y responden lo mismo: «¿qué deberíamos hacer?». Juntas, el menú baja de ocho a siete.</p></div>
+        <div class="item-num"><span class="n">5</span><h3>Dónde estás, siempre</h3><p>Ícono negro, nombre en negrita y migas arriba de cada sección: Inicio / Ventas / Personas.</p></div>
+        <div class="item-num"><span class="n">6</span><h3>Sin páginas dentro de páginas</h3><p>Cada sección muestra todo en su pantalla: Google, Instagram o una carpeta no mandan a otra página.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Flujos -->
+  <section class="seccion" id="flujos">
+    <div class="sobre">Flujos</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Siempre sabes</span> cómo volver.</h2>
+    <p class="bajada">Dos niveles, nunca tres: el menú lleva a una sección y la sección lo muestra todo. Lo que tocas adentro (una carpeta, una web) se abre en la misma pantalla. Atrás, las migas y «Volver» funcionan como esperas.</p>
+    <div class="flujo">
+      <svg viewBox="0 -26 1000 384" role="img" aria-label="Diagrama de flujos: de Inicio al detalle y de vuelta; de una tarea al lugar exacto; y Ctrl K a cualquier parte">
+        <defs>
+          <marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#080808"/></marker>
+          <marker id="flm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#7A3FC9"/></marker>
+        </defs>
+        <g font-family="Geist, system-ui, sans-serif">
+          <!-- Inicio -->
+          <rect x="20" y="125" width="150" height="80" rx="22" fill="#080808"/>
+          <text x="95" y="160" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">Inicio</text>
+          <text x="95" y="182" text-anchor="middle" fill="#A580D6" font-size="12.5" font-weight="500">¿qué hago hoy?</text>
+          <!-- carril 1: tarjeta → detalle -->
+          <rect x="250" y="40" width="190" height="64" rx="18" fill="#fff"/>
+          <text x="345" y="67" text-anchor="middle" font-size="14" font-weight="600">Tocas una tarjeta</text>
+          <text x="345" y="87" text-anchor="middle" font-size="12" fill="#8C8C93">«Personas en la web»</text>
+          <rect x="520" y="40" width="230" height="64" rx="18" fill="#fff"/>
+          <text x="635" y="67" text-anchor="middle" font-size="14" font-weight="600">Su sección, ya abierta en eso</text>
+          <text x="635" y="87" text-anchor="middle" font-size="12" fill="#8C8C93">Visibilidad con kaivastudio.com elegida</text>
+          <rect x="830" y="40" width="150" height="64" rx="18" fill="#fff" stroke="#7A3FC9" stroke-width="1.5"/>
+          <text x="905" y="67" text-anchor="middle" font-size="14" font-weight="600">← Inicio</text>
+          <text x="905" y="87" text-anchor="middle" font-size="12" fill="#8C8C93">«Volver» dice a dónde</text>
+          <path d="M170 150 C210 150 210 72 248 72" fill="none" stroke="#080808" stroke-width="2.5" marker-end="url(#fl)"/>
+          <path d="M440 72 H518" fill="none" stroke="#080808" stroke-width="2.5" marker-end="url(#fl)"/>
+          <path d="M750 72 H828" fill="none" stroke="#080808" stroke-width="2.5" marker-end="url(#fl)"/>
+          <path d="M905 40 C905 0 120 0 100 122" fill="none" stroke="#7A3FC9" stroke-width="2.5" marker-end="url(#flm)"/>
+          <text x="520" y="-10" text-anchor="middle" font-size="12.5" fill="#7A3FC9" font-weight="600">vuelves a Inicio, donde estabas</text>
+          <!-- carril 2: tarea → lugar exacto → hecho -->
+          <rect x="250" y="226" width="190" height="64" rx="18" fill="#fff"/>
+          <text x="345" y="253" text-anchor="middle" font-size="14" font-weight="600">Una tarea de Hoy</text>
+          <text x="345" y="273" text-anchor="middle" font-size="12" fill="#8C8C93">«Recordar el pago»  →</text>
+          <rect x="520" y="226" width="230" height="64" rx="18" fill="#fff"/>
+          <text x="635" y="253" text-anchor="middle" font-size="14" font-weight="600">El lugar exacto</text>
+          <text x="635" y="273" text-anchor="middle" font-size="12" fill="#8C8C93">Ventas · el cobro de Thallo</text>
+          <rect x="830" y="226" width="150" height="64" rx="18" fill="#4E1E86"/>
+          <text x="905" y="253" text-anchor="middle" font-size="14" font-weight="600" fill="#fff">Hecho ✓</text>
+          <text x="905" y="273" text-anchor="middle" font-size="12" fill="#D9CCEB">con «Deshacer»</text>
+          <path d="M170 180 C210 180 210 258 248 258" fill="none" stroke="#080808" stroke-width="2.5" marker-end="url(#fl)"/>
+          <path d="M440 258 H518" fill="none" stroke="#080808" stroke-width="2.5" marker-end="url(#fl)"/>
+          <path d="M750 258 H828" fill="none" stroke="#080808" stroke-width="2.5" marker-end="url(#fl)"/>
+          <path d="M905 290 C905 330 120 330 100 208" fill="none" stroke="#7A3FC9" stroke-width="2.5" marker-end="url(#flm)"/>
+          <text x="520" y="350" text-anchor="middle" font-size="12.5" fill="#7A3FC9" font-weight="600">el número de Inicio baja: «3 de 6 hechas»</text>
+          <!-- Ctrl K -->
+          <rect x="250" y="138" width="500" height="54" rx="27" fill="#F0F0F2" stroke="#DADADE"/>
+          <rect x="266" y="150" width="58" height="30" rx="10" fill="#080808"/>
+          <text x="295" y="170" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Ctrl K</text>
+          <text x="340" y="170" font-size="14" font-weight="600">desde cualquier pantalla: sección, cliente o «nuevo…»</text>
+          <path d="M750 165 H828" fill="none" stroke="#080808" stroke-width="2.5" stroke-dasharray="0" marker-end="url(#fl)"/>
+          <text x="905" y="160" text-anchor="middle" font-size="14" font-weight="600">Llegas</text>
+          <text x="905" y="178" text-anchor="middle" font-size="12" fill="#8C8C93">en dos teclas</text>
+        </g>
+      </svg>
+    </div>
+    <div class="pasos-flujo">
+      <div class="item-num"><span class="n">1</span><h3>Migas</h3><p>Dicen la ruta (Inicio / Ventas / Personas). Cada parte se puede tocar.</p></div>
+      <div class="item-num"><span class="n">2</span><h3>«Volver» con nombre</h3><p>«← Inicio», «← Visibilidad»: lleva a donde estabas, no a donde el panel cree.</p></div>
+      <div class="item-num"><span class="n">3</span><h3>Ctrl K y G + letra</h3><p>Ctrl K busca todo. G luego I va a Inicio, G luego V a Ventas, como en Linear.</p></div>
+      <div class="item-num"><span class="n">4</span><h3>Hecho, con Deshacer</h3><p>Marcar no pregunta «¿seguro?»: lo hace y deja 4 segundos para deshacer.</p></div>
+    </div>
+  </section>
+
+  <!-- 7. Secciones -->
+  <section class="seccion" id="secciones">
+    <div class="sobre">Cada sección</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Toca una pantalla</span> y pruébala.</h2>
+    <p class="bajada">Son pantallas vivas del prototipo, con datos de ejemplo (no son las cifras reales del estudio).</p>
+    <div class="galeria">
+      <div><a class="mac" href="app/#/ventas"><div class="marco"><div class="pantalla"><iframe data-src="app/#/ventas" title="Ventas" tabindex="-1"></iframe></div></div><div class="base"></div></a>
+        <div class="pie-g"><h3>Ventas</h3><span class="chip">Se queda</span><p>Lo primero es lo que falta cobrar, grande y en morado. Movimientos en renglones, sin tabla. Cobrado por mes en barras gorditas.</p></div></div>
+      <div><a class="mac" href="app/#/ventas/personas"><div class="marco"><div class="pantalla"><iframe data-src="app/#/ventas/personas" title="Personas" tabindex="-1"></iframe></div></div><div class="base"></div></a>
+        <div class="pie-g"><h3>Personas</h3><span class="chip morado">Cambia</span><p>De tabla a una tarjeta por persona: su color, cuánto vale, lo siguiente que toca, sus tratos y lo último que pasó.</p></div></div>
+      <div><a class="mac" href="app/#/proyectos"><div class="marco"><div class="pantalla"><iframe data-src="app/#/proyectos" title="Proyectos" tabindex="-1"></iframe></div></div><div class="base"></div></a>
+        <div class="pie-g"><h3>Proyectos</h3><span class="chip">Se queda tipo Drive</span><p>Carpetas por cliente en su color, en una fila. Tocas una y debajo, en la misma pantalla, salen su avance, su paleta, lo siguiente y sus archivos.</p></div></div>
+      <div><a class="mac" href="app/#/redes"><div class="marco"><div class="pantalla"><iframe data-src="app/#/redes" title="Redes" tabindex="-1"></iframe></div></div><div class="base"></div></a>
+        <div class="pie-g"><h3>Redes</h3><span class="chip morado">Cambia</span><p>Todo el análisis de Instagram en una pantalla: el feed en el celular, cuatro números con su línea, alcance por semana, lo que mejor funcionó y por qué, y lo que viene.</p></div></div>
+      <div><a class="mac" href="app/#/plan"><div class="marco"><div class="pantalla"><iframe data-src="app/#/plan" title="Plan" tabindex="-1"></iframe></div></div><div class="base"></div></a>
+        <div class="pie-g"><h3>Plan</h3><span class="chip">Se queda</span><p>Decidir es un flujo: una decisión a la vez, un clic la guarda y pasa a la siguiente. Al final, «Todo decidido».</p></div></div>
+      <div><a class="mac" href="app/#/visibilidad"><div class="marco"><div class="pantalla"><iframe data-src="app/#/visibilidad" title="Visibilidad" tabindex="-1"></iframe></div></div><div class="base"></div></a>
+        <div class="pie-g"><h3>Visibilidad</h3><span class="chip morado">Cambia</span><p>Google sin otra página: tocas una web y ahí mismo salen su nota, clics, veces en Google, posición, personas por semana, lo que buscan y qué subiría la nota.</p></div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-top:48px" class="en-cel">
+      <div class="cel"><div class="pantalla"><iframe data-src="app/#/inicio" data-ancho="390" title="Inicio en el celular" tabindex="-1"></iframe></div></div>
+      <div><h3 class="h-sec dos-tonos" style="font-size:clamp(24px,2.6vw,36px)"><span class="gris">Y en el celular,</span> lo mismo en una columna.</h3>
+        <p class="bajada">La barra baja al borde, con lo diario al alcance del pulgar. Primero lo que toca hoy, después decidir y cobrar, y al final los números.</p></div>
+    </div>
+  </section>
+
+  <!-- 8. Movimiento -->
+  <section class="seccion negra" id="movimiento">
+    <div class="sobre">Movimiento</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Rápido, corto</span> y con sentido.</h2>
+    <p class="bajada">Un solo sistema en lugar de 25 animaciones. Nada se mueve solo, nada flota y la entrada en cascada solo pasa la primera vez del día.</p>
+    <div class="tiempos">
+      <div class="tiempo"><b>100 ms</b><span>respuesta a un clic: marcar, presionar</span></div>
+      <div class="tiempo"><b>150 ms</b><span>pasar el mouse: contorno morado y subir 2 px</span></div>
+      <div class="tiempo"><b>220 ms</b><span>abrir menús, buscador y paneles</span></div>
+      <div class="tiempo"><b>260 ms</b><span>tarjeta que se convierte en su detalle</span></div>
+    </div>
+    <div class="demo-mov">
+      <div class="caja"><p>Pasa el mouse: sube 2 px y marca su contorno. Nada más.</p><div class="demo-tarjeta">Cobrado en octubre · $4,4 M</div></div>
+      <div class="caja"><p>Marca la tarea: se llena, se va hacia la derecha y deja «Deshacer».</p><div class="demo-check" id="demo-check"><button aria-label="Marcar"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button>Enviar avance del portal</div></div>
+      <div class="caja"><p>Lo que sale:</p><p class="mal">Carpetas que flotan · el robot que levita · entradas de 22 px · cascadas en cada visita · animar el alto de las cosas</p></div>
+    </div>
+  </section>
+
+  <!-- 9. Skills -->
+  <section class="seccion" id="skills">
+    <div class="sobre">Skills gratis para hacerlo bien</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Los mejores,</span> y cuáles cuidar.</h2>
+    <p class="bajada">Ninguno se instaló todavía. Todo comando de instalación baja y ejecuta código: se revisa antes. Las reglas de Kaiva mandan sobre cualquier skill (Geist fija, sin degradados).</p>
+    <div class="skills">
+      <div class="skill"><div class="top"><span class="chip negro">1</span><h3>Vercel · web-design-guidelines</h3><span class="chip">MIT · 32 mil ★</span></div><p>Revisa la interfaz contra más de 100 reglas: accesibilidad, foco, formularios, estados vacíos, movimiento reducido. Casi no opina de estética, así que no choca con Kaiva.</p><code>npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines</code></div>
+      <div class="skill"><div class="top"><span class="chip negro">2</span><h3>Emil Kowalski · animaciones</h3><span class="chip">MIT · 48 mil ★</span></div><p>review-animations, animate y break-ui: revisa las animaciones con dureza y prueba el panel con datos extremos. Habla de movimiento, no de colores.</p><code>npx skills@latest add emilkowalski/skills --skill review-animations</code></div>
+      <div class="skill"><div class="top"><span class="chip negro">3</span><h3>Anthropic · frontend-design</h3><span class="chip">Oficial</span></div><p>Evita el «aspecto IA». Hay que cargarlo junto con reglas-kaiva porque pide fuentes «no por defecto» y paletas de 4 a 6 colores.</p><code>/plugin install frontend-design@claude-plugins-official</code></div>
+      <div class="skill"><div class="top"><span class="chip negro">4</span><h3>dataviz (ya lo tenemos)</h3><span class="chip">En uso</span></div><p>Elegir la forma de cada gráfico, tarjetas de números, sparklines y color. Con él se hizo este prototipo. Las barras gorditas de Kaiva mandan sobre su barra fina.</p></div>
+      <div class="skill"><div class="top"><span class="chip">Con cuidado</span><h3>impeccable · Paul Bakaus</h3></div><p>El más potente para pulir, pero marca Geist como fuente «sobreusada», instala un hook que baja un programa y manda telemetría. Solo para revisar, con la telemetría apagada.</p></div>
+      <div class="skill"><div class="top"><span class="chip">No para Kaiva</span><h3>ui-ux-pro-max · taste-skill · theme-factory</h3></div><p>Proponen paletas, fuentes y estilos nuevos. Chocan con la identidad. De ui-ux-pro-max sirven solo sus guías de gráficos para leer.</p></div>
+    </div>
+  </section>
+
+  <!-- 10. Qué sigue -->
+  <section class="seccion">
+    <div class="sobre">Qué sigue</div>
+    <h2 class="h-sec dos-tonos"><span class="gris">Al panel real,</span> por partes.</h2>
+    <div class="pasos">
+      <div class="item-num"><span class="n">1</span><h3>Entrar por Inicio</h3><p>/pro/ abre Inicio, el menú con nombres y las migas con «Volver». Es lo que más cambia el día y lo que menos se toca.</p></div>
+      <div class="item-num"><span class="n">2</span><h3>Inicio nuevo</h3><p>La lista de Hoy, decidir y cobrar, cuatro números con su línea y la fila por cliente. Se quitan las tablas de días.</p></div>
+      <div class="item-num"><span class="n">3</span><h3>Movimiento</h3><p>Un solo archivo de movimiento: se borran las animaciones que flotan y la cascada se deja solo para la primera vez del día.</p></div>
+      <div class="item-num"><span class="n">4</span><h3>Personas</h3><p>De tabla a tarjetas, con sus tratos y lo último que pasó.</p></div>
+      <div class="item-num"><span class="n">5</span><h3>Ctrl K</h3><p>El buscador para ir a cualquier sección, cliente o acción.</p></div>
+      <div class="item-num"><span class="n">6</span><h3>Redes y Visibilidad</h3><p>Números con contexto, una fila igual por web y el aviso de Google en una línea.</p></div>
+    </div>
+  </section>
+
+  <p class="nota-f" style="text-align:center;margin:8px 0 24px">Kaiva Studio · propuesta interna · datos de ejemplo</p>
+</div>
+
+<script>
+  // Las pantallas vivas: escalar el iframe al ancho del Mac o del celular
+  const escalar = () => document.querySelectorAll('.mac .pantalla, .cel .pantalla').forEach(p => {
+    const f = p.querySelector('iframe'); const ancho = +(f.dataset.ancho || (p.closest('.cel') ? 390 : 1440));
+    p.style.setProperty('--s', p.clientWidth / ancho);
+  });
+  escalar(); addEventListener('resize', escalar);
+  // Cargar cada pantalla solo cuando se va a ver
+  const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.src = e.target.dataset.src; io.unobserve(e.target); } }), { rootMargin: '400px' });
+  document.querySelectorAll('iframe[data-src]').forEach(f => io.observe(f));
+  // Jerarquía: al pasar por un nivel, se enciende su zona
+  document.querySelectorAll('.nivel').forEach(n => {
+    n.addEventListener('mouseenter', () => document.querySelectorAll(`.zona[data-n="${n.dataset.n}"]`).forEach(z => z.classList.add('luz')));
+    n.addEventListener('mouseleave', () => document.querySelectorAll('.zona.luz').forEach(z => z.classList.remove('luz')));
+  });
+  // Demo de marcar hecho
+  const dc = document.getElementById('demo-check');
+  dc.querySelector('button').addEventListener('click', () => {
+    dc.classList.add('si'); setTimeout(() => dc.classList.add('fuera'), 120);
+    setTimeout(() => { dc.classList.remove('si', 'fuera'); }, 1600);
+  });
+</script>
+</body>
+</html>

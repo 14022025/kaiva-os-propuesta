@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaiva OS · investigación</title>
+<meta name="description" content="Qué dicen los mejores del mundo sobre dashboards, menús, flujos, movimiento y skills de diseño, aplicado a Kaiva OS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/kaiva.css">
+<link rel="stylesheet" href="assets/propuesta.css">
+</head>
+<body class="doc">
+<div class="envoltura">
+  <header class="barra-sup">
+    <a class="k" href="index.html">K</a>
+    <nav><a href="index.html">Propuesta</a><a class="activo" href="investigacion.html">Investigación</a><a href="app/">Prototipo</a></nav>
+    <a class="pildora" href="app/">Abrir el prototipo<span class="circulo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </header>
+
+  <section class="seccion">
+    <div class="sobre">Investigación · 20 de octubre de 2026</div>
+    <h1 class="h-grande dos-tonos" style="font-size:clamp(34px,4.6vw,64px)"><span class="gris">Cómo se hace</span> un panel que sirve.</h1>
+    <p class="bajada">Lo que dicen los referentes mundiales sobre dashboards, menús, flujos y movimiento, y qué skills gratis ayudan a hacerlo. Cada punto lleva su fuente. Casi todo viene de libros, guías de fabricantes y practicantes: no hay estudios científicos sobre dashboards, así que la «regla de 5 segundos» o el «máximo de 5 a 9» son convenciones, no leyes.</p>
+  </section>
+
+  <div class="doc-cuerpo">
+    <nav class="indice">
+      <a href="#resumen">Resumen</a>
+      <a href="#dashboards">1. Dashboards</a>
+      <a href="#inicio">2. Qué va en Inicio</a>
+      <a href="#menu">3. Menú</a>
+      <a href="#flujos">4. Flujos</a>
+      <a href="#movimiento">5. Movimiento</a>
+      <a href="#juego">6. Que se sienta como un juego</a>
+      <a href="#errores">7. Errores que lo arruinan</a>
+      <a href="#referentes">8. Productos de referencia</a>
+      <a href="#skills">9. Skills gratis</a>
+      <a href="#vacios">10. Lo que no se pudo verificar</a>
+    </nav>
+
+    <div class="articulo">
+      <section class="seccion" id="resumen">
+        <h2>Resumen: las claves exactas</h2>
+        <div class="claves">
+          <div class="clave"><b>Una pregunta</b>Inicio responde «¿qué tengo que hacer o decidir hoy?».</div>
+          <div class="clave"><b>Cinco segundos</b>Un vistazo basta para saber si hay un incendio.</div>
+          <div class="clave"><b>Una pantalla</b>Sin scroll en computador; lo largo se desplaza dentro de su tarjeta.</div>
+          <div class="clave"><b>Cuatro números</b>Como mucho, y cada uno con su comparación.</div>
+          <div class="clave"><b>Arriba a la izquierda</b>Lo urgente: lo atrasado y lo que falta cobrar.</div>
+          <div class="clave"><b>Cada dato, su forma</b>Línea para tendencia, barras para comparar, texto para decidir, tabla solo para buscar.</div>
+          <div class="clave"><b>Gris por defecto</b>Un solo color de acento para «hazlo ahora».</div>
+          <div class="clave"><b>Excepciones</b>Lo normal no se destaca; si no hay nada, «Todo al día».</div>
+          <div class="clave"><b>Íconos con nombre</b>Siempre visible, nunca solo al pasar el mouse.</div>
+          <div class="clave"><b>Estás aquí</b>Sección marcada en el menú, migas y título único.</div>
+          <div class="clave"><b>Ctrl K</b>Un buscador para ir a todo con dos teclas.</div>
+          <div class="clave"><b>Menos de 300 ms</b>Solo transform y opacity; lo de cada rato, sin animación.</div>
+        </div>
+      </section>
+
+      <section class="seccion" id="dashboards">
+        <h2>1. Qué es un buen dashboard</h2>
+        <h3>Sirve para vigilar, no para explorar (Stephen Few)</h3>
+        <p>Few, autor de <i>Information Dashboard Design</i>, lo define como la información más importante para cumplir uno o más objetivos, en una sola pantalla y legible de un vistazo. Muestra resúmenes y excepciones; el «por qué» se busca entrando al detalle. No es una herramienta de exploración. <a href="https://www.informationweek.com/data-management/dashboard-confusion">InformationWeek</a> · <a href="https://uxmatters.com/mt/archives/2007/04/book-review-information-dashboard-design.php">UXmatters</a></p>
+        <h3>Una sola pantalla</h3>
+        <p>El primero de los 13 errores de Few es salirse de una pantalla: si hay que hacer scroll, se depende de la memoria de corto plazo. <a href="https://www.thedataschool.co.uk/anh-vu/are-you-making-these-13-dashboard-design-mistakes/">The Data School</a>. Matiz: Juice Analytics recuerda que caber en una página no garantiza que se entienda. <a href="https://www.juiceanalytics.com/writing/breaking-free-one-page-dashboard-rule">Juice Analytics</a></p>
+        <h3>Mínimo esfuerzo (Nielsen Norman Group)</h3>
+        <p>NN/g pide entregar la información con la mínima interacción y el mínimo esfuerzo mental. Separa el dashboard <b>operativo</b> (decisiones inmediatas, datos que cambian seguido) del <b>analítico</b> (análisis sin prisa). Para cantidades: barras y líneas; casi nunca tortas, donas, 3D ni medidores de aguja. El color refuerza, no codifica magnitud. <a href="https://www.nngroup.com/articles/dashboards-preattentive/">NN/g · Dashboards y atributos preatentivos</a></p>
+        <h3>Regla de 5 segundos y pirámide invertida</h3>
+        <p>Lo relevante tiene que encontrarse en unos 5 segundos. Arriba van los hallazgos, en medio las tendencias y abajo el detalle, con un máximo de 5 a 9 visualizaciones. <a href="https://sisense.com/blog/4-design-principles-creating-better-dashboards">Sisense</a></p>
+        <h3>Lo más importante arriba a la izquierda (Tableau)</h3>
+        <p>La vista clave ocupa la esquina superior izquierda; dos o tres vistas por dashboard, y si hacen falta más, otro dashboard. Diseñar al tamaño real de pantalla. <a href="https://help.tableau.com/current/pro/desktop/en-us/dashboards_best_practices.htm">Tableau · buenas prácticas</a></p>
+        <h3>La gente escanea títulos (patrón «layer-cake»)</h3>
+        <p>NN/g muestra que el patrón F existe pero es malo; el bueno es el «layer-cake»: la gente lee títulos y salta el texto. Por eso cada bloque necesita un título claro con lo esencial en las primeras palabras. <a href="https://nngroup.com/articles/f-shaped-pattern-reading-web-content/">NN/g · patrón F</a> · <a href="https://nngroup.com/articles/text-scanning-patterns-eyetracking/">NN/g · patrones de escaneo</a></p>
+        <h3>Un número siempre con contexto (Tufte)</h3>
+        <p class="cita">«Compared to what?» — Edward Tufte</p>
+        <p>Un número solo no dice si es bueno o malo. Se compara contra una meta, el periodo anterior o su propia tendencia (sparkline). Y se redondea: «$4,2 M», no «$4.213.587». <a href="https://www.edwardtufte.com/notebook/sparkline-theory-and-practice-edward-tufte/">Tufte · sparklines</a> · <a href="https://www.geckoboard.com/uploads/geckoboard-dashboard-design-and-build-a-great-dashboard.pdf">Geckoboard (PDF)</a></p>
+        <h3>Sparklines y small multiples (Tufte)</h3>
+        <p>La sparkline es un gráfico del tamaño de una palabra, pegado al número: la mejor forma de darle tendencia sin ocupar espacio. Para comparar clientes, el mismo gráfico pequeño repetido con la misma escala. Fuera toda tinta que no sea dato. <a href="https://medium.com/plotly/above-all-else-show-the-data-1b8bbf05c2ae">Plotly · data-ink</a> · <a href="https://www.r-bloggers.com/why-you-should-master-the-small-multiple-chart/">R-bloggers · small multiples</a></p>
+        <h3>Tabla o gráfico (Few)</h3>
+        <p>La tabla sirve para buscar un valor exacto; el gráfico, para ver patrones, tendencias y excepciones. Si el mensaje es un patrón, va gráfico. <a href="https://www.southeast.edu/about/files/designing-effective-tables-charts-201206.pdf">Few · tablas y gráficos (PDF)</a></p>
+        <h3>Gris por defecto, color para lo que importa (Cole Nussbaumer Knaflic)</h3>
+        <p>La autora de <i>Storytelling with Data</i> recomienda uno o dos colores como señal de «mira aquí»: el resaltado pierde fuerza cuanto más se usa. Su prueba: dejar de mirar, volver a mirar y anotar dónde cae la vista primero. <a href="https://www.tableau.com/blog/where-are-your-eyes-drawn-45392">Tableau · Where are your eyes drawn?</a></p>
+        <h3>Jerarquía por tamaño, espacio y agrupación (Apple)</h3>
+        <p>El espaciado, el tamaño y la agrupación crean jerarquía; lo principal es lo más prominente. Gráficos simples y que la persona decida cuándo ver más. <a href="https://developer.apple.com/design/human-interface-guidelines/charting-data">Apple HIG · Charting data</a></p>
+        <h3>Excepciones y acción</h3>
+        <p>Una alerta solo existe si alguien puede actuar, y aparece una vez. El dashboard operativo responde «¿qué hago ahora?» y muestra las colas que piden acción hoy. <a href="https://www.basedash.com/blog/operational-dashboards-vs-analytical-dashboards-how-to-design-each">Basedash</a> · <a href="https://oxmaint.com/industries/facility-management/fm-dashboard-alert-design-push-silence">Oxmaint</a></p>
+      </section>
+
+      <section class="seccion" id="inicio">
+        <h2>2. Qué va en Inicio para Kaiva</h2>
+        <p>Inicio es <b>operativo</b>: se mira todos los días. Lo estratégico (cómo va el año) y lo analítico (por qué bajó algo) viven dentro de cada sección.</p>
+        <h3>Todos los días, en Inicio</h3>
+        <ol>
+          <li><b>Hoy requiere acción</b> (arriba a la izquierda): lo atrasado, lo de hoy, cobros vencidos, aprobaciones esperando y publicaciones sin aprobar. Cada fila con un clic para resolverla.</li>
+          <li><b>Decidir y cobrar</b>: la próxima decisión y lo que falta cobrar con su botón «Recordar».</li>
+          <li><b>Cuatro números con contexto</b>: cobrado del mes contra la meta, tratos abiertos, personas en la web y alcance en Instagram, cada uno con su sparkline o barra de meta.</li>
+          <li><b>Cómo va cada cliente</b>: una fila igual por cliente con su próxima entrega y si debe plata (idea de Vercel y los hill charts de Basecamp: lo que no se mueve, se nota).</li>
+          <li><b>Sale esta semana</b>: solo los próximos 7 días de contenido, con su imagen.</li>
+        </ol>
+        <h3>Cada semana (cabecera de cada sección)</h3>
+        <p>Rendimiento de redes contra la semana anterior, tráfico de la web y Google, tratos ganados y perdidos.</p>
+        <h3>Cuando haga falta (fuera de Inicio)</h3>
+        <p>Contabilidad completa, margen por cliente, tasa de cierre, competencia, brand books y carpetas, CRM completo y el feed. Se consultan, no se vigilan. Los KPIs de agencia (margen, flujo de caja, retención, tasa de cierre) vienen de <a href="https://agencyanalytics.com/blog/agency-metrics-kpis-profitability-growth">AgencyAnalytics</a> y <a href="https://databox.com/marketing-agency-kpis">Databox</a>.</p>
+        <h3>Qué sale de Inicio</h3>
+        <p>Las tablas de días, las carpetas, el feed completo, la competencia, los accesos a herramientas y todo lo que es igual cada día. Shopify recibió quejas en 2026 por llenar su Inicio de sugerencias y tarjetas que escondían las cifras (<a href="https://community.shopify.com/t/what-s-up-with-the-admin-hime-page/632251">foro de Shopify</a>): Inicio no es lugar de promociones.</p>
+      </section>
+
+      <section class="seccion" id="menu">
+        <h2>3. El menú</h2>
+        <h3>Íconos siempre con su nombre</h3>
+        <p>NN/g: el texto tiene que estar junto al ícono, visible todo el tiempo, sin depender del hover; sin texto, los íconos de navegación pierden todo su sentido. <a href="https://www.nngroup.com/articles/icon-usability/">NN/g · usabilidad de íconos</a></p>
+        <h3>Barra visible, lo menos importante abajo</h3>
+        <p>Solo íconos no es recomendable; para apps de uso diario, ícono más texto. En menús largos, lo menos importante va abajo. <a href="https://www.nngroup.com/articles/vertical-nav/">NN/g · navegación vertical</a></p>
+        <h3>Siempre «estás aquí»</h3>
+        <p>No mostrar dónde está la persona es, para NN/g, probablemente el error más común en menús. Resaltar la sección actual, un título de página único y un logo que lleve a Inicio. <a href="https://www.nngroup.com/articles/menu-design/">NN/g · diseño de menús</a> · <a href="https://www.nngroup.com/articles/navigation-you-are-here/">NN/g · «you are here»</a></p>
+        <h3>Cuántos y cómo</h3>
+        <ul>
+          <li>Material Design: la barra lateral (navigation rail) lleva de 3 a 7 destinos. <a href="https://developer.android.com/reference/kotlin/androidx/compose/material3/NavigationRail.composable">Android · NavigationRail</a></li>
+          <li>Apple: máximo dos niveles en una barra lateral, grupos con títulos cortos y no esconderla por defecto. <a href="https://developer.apple.com/design/human-interface-guidelines/sidebars">Apple HIG · Sidebars</a></li>
+          <li>La sección activa lleva indicador y el ícono relleno; los separadores agrupan; el número del badge solo cuando hay algo por hacer, un punto para «hay novedad». <a href="https://www.sap.com/design-system/fiori-design-android/v25-4/components/m3-standard-components/navigation-drawer/usage">SAP Fiori sobre Material 3</a></li>
+        </ul>
+        <h3>Cómo lo hacen los mejores</h3>
+        <ul>
+          <li><b>Linear</b> deja reordenar la barra, esconder lo poco usado y elegir si los pendientes se ven como número o punto. <a href="https://linear.app/changelog/2024-12-18-personalized-sidebar">Linear changelog</a></li>
+          <li><b>Notion</b>: Buscar e Inicio arriba; Ajustes, Plantillas y Papelera abajo. <a href="https://www.notion.com/help/navigate-with-the-sidebar">Notion · sidebar</a></li>
+          <li><b>Stripe</b>: atajos con páginas fijadas y recientes; «?» muestra los atajos. <a href="https://docs.stripe.com/dashboard/basics">Stripe · dashboard</a></li>
+          <li><b>Vercel</b> (2026) cambió las pestañas por una barra lateral ordenada por los flujos de trabajo más frecuentes. <a href="https://vercel.com/changelog/dashboard-navigation-redesign-rollout">Vercel changelog</a></li>
+        </ul>
+      </section>
+
+      <section class="seccion" id="flujos">
+        <h2>4. Flujos: Inicio → sección → detalle → volver</h2>
+        <h3>Las migas muestran jerarquía, no historial</h3>
+        <p>Complementan el menú. La página actual va al final y sin enlace. El historial es cosa de «Atrás». <a href="https://www.nngroup.com/articles/breadcrumbs/">NN/g · breadcrumbs</a></p>
+        <h3>La dirección es el estado</h3>
+        <p>Guía de Vercel: filtros, pestañas y paneles abiertos van en la dirección (deep-link de todo); Atrás y Adelante restauran el scroll; la navegación usa enlaces de verdad; interfaz optimista con Deshacer; los indicadores de carga esperan 150–300 ms antes de aparecer. <a href="https://vercel.com/design/guidelines">Vercel · Web Interface Guidelines</a></p>
+        <h3>Ctrl K (command palette)</h3>
+        <p>Superhuman: un solo atajo memorable que funcione en todas las pantallas, con todos los comandos, búsqueda tolerante a errores y el atajo de cada comando a la vista para enseñarlo. <a href="https://blog.superhuman.com/how-to-build-a-remarkable-command-palette/">Superhuman</a>. Linear además usa G luego una letra para ir a cada sección. <a href="https://linear.app/docs/inbox">Linear · Inbox</a></p>
+        <h3>Revelar de a poco, máximo dos niveles</h3>
+        <p>Arriba solo lo frecuente; más de dos niveles suele fallar. <a href="https://www.nngroup.com/articles/progressive-disclosure/">NN/g · progressive disclosure</a></p>
+        <h3>Estados vacíos que guían</h3>
+        <p>Decir qué pasa (nunca dejar el espacio en blanco), enseñar la función en contexto y dar un camino directo con un botón. <a href="https://www.nngroup.com/articles/empty-state-interface-design/">NN/g · estados vacíos</a>. Este es justo el caso de «Personas en la web» hoy: lleva a una página vacía.</p>
+        <h3>Una sola bandeja de «qué hago ahora»</h3>
+        <p>El Inbox de Linear junta todo lo que pide atención; en septiembre de 2026 sumó una pestaña de prioridad porque lo urgente se perdía entre notificaciones. <a href="https://linear.app/changelog/2026-09-03-priority-inbox">Linear · Priority inbox</a>. Superhuman trata la bandeja como lista de tareas. <a href="https://blog.superhuman.com/inbox-zero-in-7-steps/">Superhuman · inbox zero</a></p>
+      </section>
+
+      <section class="seccion" id="movimiento">
+        <h2>5. Movimiento</h2>
+        <h3>Los tiempos</h3>
+        <ul>
+          <li>Hasta 0,1 s se siente instantáneo; la respuesta a un clic tiene que empezar antes. <a href="https://www.nngroup.com/articles/response-times-3-important-limits/">NN/g · tiempos de respuesta</a></li>
+          <li>Rango general de 100 a 500 ms; casillas, unos 100 ms; ventanas, 200–300 ms; 400 ms ya es «muy lento». Entrar dura un poco más que salir. <a href="https://www.nngroup.com/articles/animation-duration/">NN/g · duración</a></li>
+          <li>Emil Kowalski: las animaciones de interfaz casi siempre por debajo de 300 ms; nada que empiece con el teclado se anima; lo que se usa cientos de veces al día, sin animación (Raycast no anima su apertura). <a href="https://emilkowal.ski/ui/you-dont-need-animations">Emil Kowalski · You don't need animations</a></li>
+          <li>Material 3: duraciones cortas de 50 a 200 ms, medianas de 250 a 400; la duración crece con la distancia. Fundido para cambiar entre secciones sin relación, eje compartido para padre → hijo, y «container transform» para tarjeta → detalle. <a href="https://github.com/material-components/material-components-android/blob/master/docs/theming/Motion.md">Material · Motion</a></li>
+        </ul>
+        <h3>Qué animar y qué no</h3>
+        <ul>
+          <li>Solo <code>transform</code> y <code>opacity</code>, a 60 cuadros, siempre interrumpible y respetando «reducir movimiento». <a href="https://emilkowal.ski/ui/great-animations">Emil Kowalski · great animations</a></li>
+          <li>Apple: no agregar movimiento por agregarlo; evitarlo en lo frecuente; nunca hacer esperar a que termine una animación. <a href="https://developer.apple.com/design/human-interface-guidelines/motion">Apple HIG · Motion</a></li>
+          <li>Rauno Freiberg: consistencia espacial (lo que se abre sale de donde vive y vuelve ahí) y no animar lo que se repite mil veces. <a href="https://rauno.me/craft/interaction-design">Rauno · Invisible details</a></li>
+        </ul>
+        <h3>Por qué las tarjetas que saltan se sienten mal</h3>
+        <p>Google trata como defecto todo movimiento de diseño que la persona no espera (CLS): solo se perdona en los 500 ms después de un clic. Animar con transform no mueve el diseño; cambiar el alto o la posición sí. <a href="https://web.dev/articles/cls">web.dev · CLS</a>. Para reordenar con suavidad: la técnica FLIP. <a href="https://aerotwist.com/blog/flip-your-animations/">Aerotwist · FLIP</a></p>
+        <h3>View Transitions: la tarjeta que se convierte en su detalle</h3>
+        <p>La API de View Transitions hace transiciones entre vistas con capturas del antes y el después. Funciona en Chrome, Safari 18 y Firefox 144. Es lo que usa el prototipo para que la tarjeta tocada se convierta en la cabecera de su detalle. <a href="https://developer.chrome.com/docs/web-platform/view-transitions">Chrome · View Transitions</a></p>
+      </section>
+
+      <section class="seccion" id="juego">
+        <h2>6. Que se sienta como un juego (sin ser infantil)</h2>
+        <ul>
+          <li><b>Microinteracciones</b> (Dan Saffer): disparador, reglas, respuesta y repetición; la respuesta es lo que enseña las reglas. <a href="https://cieden.com/book/sub-atomic/microinteractions/structure-of-microinteractions">Cieden (resumen)</a></li>
+          <li><b>Todoist Karma</b>: metas diarias que pone la persona, rachas, días libres y modo vacaciones para no castigar. <a href="https://todoist.com/help/articles/introduction-to-karma">Todoist</a></li>
+          <li><b>Duolingo</b>: la racha da responsabilidad; poder «congelarla» subió los usuarios diarios. La flexibilidad motiva más que la rigidez. <a href="https://blog.duolingo.com/how-duolingo-streak-builds-habit">Duolingo</a></li>
+          <li><b>Ser rápido ya es recompensa</b>: Raycast hizo su propio buscador para que todo esté a una o dos teclas. <a href="https://raycast.com/blog/the-new-raycast">Raycast</a></li>
+        </ul>
+        <p>En el prototipo: el aro «2 de 6 hechas», marcar con un clic y Deshacer, «Todo al día · 3 días seguidos» y las decisiones de a una con su avance. Las celebraciones, pocas: cerrar una venta o dejar Inicio en cero.</p>
+      </section>
+
+      <section class="seccion" id="errores">
+        <h2>7. Errores que vuelven inútil un panel</h2>
+        <p>Los 13 errores de Stephen Few: salirse de una pantalla, contexto insuficiente, detalle o precisión de más, medida mal elegida, gráfico equivocado, variedad sin sentido, gráficos mal hechos, cantidades mal codificadas, mala disposición, no resaltar lo importante, decoración inútil, abuso del color y diseño poco atractivo. <a href="https://www.thedataschool.co.uk/anh-vu/are-you-making-these-13-dashboard-design-mistakes-part-2">The Data School</a> · <a href="https://adatis.co.uk/great-dashboard-design/">Adatis</a></p>
+        <p>Además: muchas tarjetas de cifras compitiendo (con 8 a 12 la memoria ya no da) <a href="https://tabulareditor.com/blog/kpi-card-best-practices-dashboard-design">Tabular Editor</a>, todo del mismo tamaño y datos que nunca cambian ocupando Inicio.</p>
+      </section>
+
+      <section class="seccion" id="referentes">
+        <h2>8. Productos de referencia</h2>
+        <ul>
+          <li><b>Stripe</b>: Inicio mezcla un resumen con avisos que piden acción (disputas, verificaciones). Las cifras exactas, en Reportes. <a href="https://docs.stripe.com/dashboard/basics">Stripe</a></li>
+          <li><b>Linear</b>: bandeja con pestaña de prioridad, teclado para todo y una interfaz rediseñada para bajar el ruido y subir la jerarquía. <a href="https://linear.app/now/how-we-redesigned-the-linear-ui">Linear · rediseño</a></li>
+          <li><b>Basecamp</b>: los hill charts muestran el avance sin preguntar: un punto que no se mueve es como una mano levantada. <a href="https://basecamp.com/shapeup/3.4-chapter-13">Shape Up</a></li>
+          <li><b>Plausible</b>: todo en una página, solo lo esencial y un gráfico principal que cambia al tocar cada número. <a href="https://docs.plausible.io/guided-tour">Plausible</a></li>
+          <li><b>Vercel</b>: una fila de estado por proyecto. <a href="https://vercel.com/blog/dashboard-redesign">Vercel</a></li>
+          <li><b>AgencyAnalytics</b>: un panel por cliente y alertas cuando una métrica cruza un umbral. <a href="https://agencyanalytics.com/feature/alerts">AgencyAnalytics</a></li>
+        </ul>
+      </section>
+
+      <section class="seccion" id="skills">
+        <h2>9. Skills gratis para Claude Code</h2>
+        <p>No se instaló nada. Todo comando de instalación baja y ejecuta código, así que se revisa antes. Las estrellas son aproximadas, de octubre de 2026.</p>
+        <ol>
+          <li><b>Vercel · web-design-guidelines</b> (MIT, unas 32 mil estrellas): más de 100 reglas de accesibilidad, foco, formularios, estados vacíos y movimiento; casi no opina de estética. Ojo: baja sus reglas de internet en cada uso. <a href="https://github.com/vercel-labs/agent-skills">GitHub</a><span class="cmd" style="margin-top:6px">npx skills add https://github.com/vercel-labs/agent-skills --skill web-design-guidelines</span></li>
+          <li><b>Emil Kowalski · skills</b> (MIT, unas 48 mil): review-animations, animate, improve-animations, animation-performance y break-ui (probar con datos extremos). <a href="https://github.com/emilkowalski/skills">GitHub</a><span class="cmd" style="margin-top:6px">npx skills@latest add emilkowalski/skills --skill review-animations</span></li>
+          <li><b>Anthropic · frontend-design</b> (oficial, Apache-2.0): evita el «aspecto IA»; cargarlo con reglas-kaiva porque pide fuentes «no por defecto». <a href="https://github.com/anthropics/claude-plugins-official">GitHub</a><span class="cmd" style="margin-top:6px">/plugin install frontend-design@claude-plugins-official</span></li>
+          <li><b>dataviz</b> (ya está en esta sesión): forma de cada gráfico, tarjetas de números, sparklines y validador de color.</li>
+          <li><b>impeccable</b> (Paul Bakaus, Apache-2.0, unas 84 mil): el más potente para pulir, pero marca Geist como fuente sobreusada, instala un hook que baja un programa y manda telemetría. Solo para revisar, con <code>IMPECCABLE_NO_TELEMETRY=1</code>. <a href="https://github.com/pbakaus/impeccable">GitHub</a></li>
+        </ol>
+        <p>No sirven para Kaiva porque proponen paletas y fuentes propias: ui-ux-pro-max, taste-skill, theme-factory y brand-guidelines. web-artifacts-builder es para React y no aplica al panel en PHP. Colecciones: <a href="https://github.com/ComposioHQ/awesome-claude-skills">awesome-claude-skills</a> y <a href="https://skills.sh">skills.sh</a>.</p>
+      </section>
+
+      <section class="seccion" id="vacios">
+        <h2>10. Lo que no se pudo verificar</h2>
+        <p>La definición propia de Gartner sobre tipos de dashboard, la guía de gráficos de Material 3 (su sitio no cargó; se usó la documentación de GitHub), el texto literal de Knaflic sobre «gris por defecto» (solo aparece en resúmenes), un límite oficial de KPIs de Klipfolio o Databox y los dashboards de HubSpot, Notion, Monday, Things y Superhuman. Nada de eso se cita como hecho.</p>
+      </section>
+    </div>
+  </div>
+  <p class="nota-f" style="text-align:center;margin:8px 0 24px">Kaiva Studio · investigación interna</p>
+</div>
+</body>
+</html>
