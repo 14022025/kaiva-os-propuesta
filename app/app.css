@@ -417,3 +417,7 @@ body.app { height: 100dvh; overflow: hidden; }
 .carpeta-mini { position: relative; overflow: hidden; }
 .carpeta-mini .cp { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(.55); }
 .carpeta-fila:hover .carpeta-mini .cp { transform: translate(-50%, -56%) scale(.55); }
+/* Regla de la casa: los celulares NO se estiran. Proporción fija de teléfono, pegado arriba. */
+.celular { width: 220px; height: auto; aspect-ratio: 9 / 19.5; align-self: flex-start; flex: none; }
+.celular .pantalla { height: 100%; }
+@media (max-width: 860px) { .celular { width: 100%; max-width: 260px; } }
